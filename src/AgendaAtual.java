@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -69,6 +68,23 @@ public class AgendaAtual {
     static void removerContato(Scanner sc) {
     }
     static void detalharContato(Scanner sc) {
+        System.out.println("Digite o ID do contato: ");
+        int id = sc.nextInt();
+
+        int index = ids.indexOf(id);
+        if (index != -1) {
+            String contato = contatos.get(index);
+            String numero = numeros.get(index);
+            String email = emails.get(index);
+
+            System.out.println("Detalhes do Contato:");
+            System.out.println("ID: " + id);
+            System.out.println("Nome: " + contato);
+            System.out.println("Telefone: " + numero);
+            System.out.println("E-mail: " + email);
+        } else {
+            System.out.println("Contato não encontrado. Verifique o ID e tente novamente!");
+        }
     }
     static void editarContato(Scanner sc) {
     }
