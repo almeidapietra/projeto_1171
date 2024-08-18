@@ -110,8 +110,7 @@ public class AgendaAtual {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-
-        sc.close();
+        
     }
 
     static void detalharContato(Scanner sc) {
