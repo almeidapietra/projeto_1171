@@ -136,63 +136,58 @@ public class AgendaAtual {
 
     static void editarContato(Scanner sc) {
 
-            System.out.println("Contatos disponíveis:");
-            if (ids.isEmpty()) {
-                System.out.println("Nenhum contato disponível.");
-                return;
+        if (numeros.isEmpty()) {
+            System.out.println("Nenhum contato disponível.");
+            return;
+
+        }
+
+        System.out.print("Digite o telefone do contato que deseja editar: ");
+        sc.nextLine();
+        String telefone = sc.nextLine();
+
+
+        int index = numeros.indexOf(telefone);
+        if (index != -1) {
+            String contatoAtual = contatos.get(index);
+            String numeroAtual = numeros.get(index);
+            String emailAtual = emails.get(index);
+
+            System.out.println("Nome atual: " + contatoAtual);
+            System.out.println("Telefone atual: " + numeroAtual);
+            System.out.println("E-mail atual: " + emailAtual);
+
+
+            System.out.print("Novo nome: ");
+            String novoNome = sc.nextLine();
+            if (!novoNome.isEmpty()) {
+                contatos.set(index, novoNome);
             }
-            for (int id : ids) {
-                System.out.println("ID: " + id);
+
+
+            System.out.print("Novo telefone: ");
+            String novoNumero = sc.nextLine();
+            if (!novoNumero.isEmpty()) {
+                numeros.set(index, novoNumero);
             }
-            System.out.println();
-
-            System.out.print("Digite o ID do contato que deseja editar: ");
-            int id = sc.nextInt();
-            sc.nextLine();
 
 
-            int index = ids.indexOf(id);
-            if (index != -1) {
-
-                String contatoAtual = contatos.get(index);
-                String numeroAtual = numeros.get(index);
-                String emailAtual = emails.get(index);
-
-                System.out.println("Editar contato:");
-                System.out.println("Nome atual: " + contatoAtual);
-                System.out.println("Telefone atual: " + numeroAtual);
-                System.out.println("E-mail atual: " + emailAtual);
-
-
-                System.out.print("Novo nome: ");
-                String novoNome = sc.nextLine();
-                if (!novoNome.isEmpty()) {
-                    contatos.set(index, novoNome);
-                }
-
-
-                System.out.print("Novo telefone: ");
-                String novoNumero = sc.nextLine();
-                if (!novoNumero.isEmpty()) {
-                    numeros.set(index, novoNumero);
-                }
-
-
-                System.out.print("Novo e-mail : ");
-                String novoEmail = sc.nextLine();
-                if (!novoEmail.isEmpty()) {
-                    emails.set(index, novoEmail);
-                }
-
-
-                System.out.println("Contato atualizado:");
-                System.out.println("ID: " + id);
-                System.out.println("Nome: " + contatos.get(index));
-                System.out.println("Telefone: " + numeros.get(index));
-                System.out.println("E-mail: " + emails.get(index));
-            } else {
-                System.out.println("Contato não encontrado. Verifique o ID e tente novamente!");
+            System.out.print("Novo e-mail : ");
+            String novoEmail = sc.nextLine();
+            if (!novoEmail.isEmpty()) {
+                emails.set(index, novoEmail);
             }
+
+
+            System.out.println("Contato atualizado:");
+            System.out.println("Nome: " + contatos.get(index));
+            System.out.println("Telefone: " + numeros.get(index));
+            System.out.println("E-mail: " + emails.get(index));
+        } else {
+            System.out.println("Contato não encontrado. Verifique o telefone e tente novamente!");
+
+        }
         }
     }
+
 
