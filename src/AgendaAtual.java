@@ -93,22 +93,23 @@ public class AgendaAtual {
     }
 
     static void detalharContato(Scanner sc) {
-        System.out.println("Digite o ID do contato: ");
-        int id = sc.nextInt();
+        System.out.println(">>>> Detalhes do contato <<<<");
+        sc.nextLine();
+        System.out.println("Digite o telefone do contato: ");
+        String telefone = sc.nextLine();
 
-        int index = ids.indexOf(id);
+
+        int index = numeros.indexOf(telefone);
         if (index != -1) {
             String contato = contatos.get(index);
-            String numero = numeros.get(index);
             String email = emails.get(index);
 
-            System.out.println("Detalhes do Contato:");
-            System.out.println("ID: " + id);
+            System.out.println("Detalhes do contato:");
             System.out.println("Nome: " + contato);
-            System.out.println("Telefone: " + numero);
+            System.out.println("Telefone: " + telefone);
             System.out.println("E-mail: " + email);
         } else {
-            System.out.println("Contato não encontrado. Verifique o ID e tente novamente!");
+            System.out.println("Contato não encontrado. Verifique o telefone e tente novamente!");
         }
     }
 
