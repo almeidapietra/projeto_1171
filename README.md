@@ -132,9 +132,11 @@ Para contribuir com este projeto, siga as etapas abaixo:
 ### Editar Contato
 
 - **Estruturas e Métodos Utilizados**:
-    - **ArrayList**: Utilizada para armazenar e atualizar os dados dos contatos. O método `indexOf` é usado para encontrar o índice do contato que será editado, e o método `set` atualiza os dados existentes.
-    - **Método `isEmpty`**: Verifica se os novos valores fornecidos pelo usuário são não vazios antes de atualizar os dados.
-    - **Verificação de ID**: Exibe todos os IDs disponíveis e valida se o ID fornecido pelo usuário existe na lista. Se o contato não for encontrado, uma mensagem de erro é exibida.
+    - **ArrayList**: Utilizadas para armazenar e atualizar os dados dos contatos, telefones e e-mails. Os métodos `indexOf` são usados para encontrar o índice do contato e do telefone que serão editados, e o método `set` atualiza os dados existentes.
+    - **Método `isEmpty`**: Utilizado para verificar se a lista de IDs ou números de telefone está vazia antes de prosseguir com a edição. Caso a lista esteja vazia, uma mensagem é exibida ao usuário.
+    - **Verificação de ID e Telefone**: Exibe todos os IDs disponíveis para escolha e valida se o ID e o telefone fornecidos pelo usuário existem na lista. Se o contato ou telefone não for encontrado, uma mensagem de erro é exibida.
+    - **Atualização Condicional**: Os novos valores de nome, telefone e e-mail são atualizados somente se não estiverem vazios.
+
 
 ### Exibir Menu
 
