@@ -90,6 +90,28 @@ public class AgendaAtual {
     }
 
     static void removerContato(Scanner sc) {
+        sc.nextLine();
+        System.out.println("Digite o telefone do contato que você deseja remover: ");
+        String telefone = sc.nextLine();
+
+        try {
+            int indexParaRemover = numeros.indexOf(telefone);
+            if (!numeros.contains(telefone)) {
+                throw new IllegalArgumentException("Esse contato não existe, tente novamente");
+            }
+
+            numeros.remove(indexParaRemover);
+            contatos.remove(indexParaRemover);
+            emails.remove(indexParaRemover);
+            ids.remove(indexParaRemover);
+
+            System.out.println("Contato deletado com sucesso!");
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        sc.close();
     }
 
     static void detalharContato(Scanner sc) {
