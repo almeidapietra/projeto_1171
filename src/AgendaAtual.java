@@ -64,7 +64,29 @@ public class AgendaAtual {
     }
 
     static void adicionarContato(Scanner sc) {
+        sc.nextLine();
+        System.out.print("Digite o nome do contato: ");
+        String nome = sc.nextLine();
+        System.out.print("Digite o telefone do contato: ");
+        String telefone = sc.nextLine();
+        System.out.print("Digite o e-mail do contato: ");
+        String email = sc.nextLine();
 
+        try {
+            if (numeros.contains(telefone)) {
+                throw new Exception("Este telefone já está cadastrado. Não é possível adicionar o mesmo número mais de uma vez.");
+            }
+
+            contatos.add(nome);
+            numeros.add(telefone);
+            emails.add(email);
+            ids.add(contId++);
+
+            System.out.println("Contato adicionado com sucesso!");
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     static void removerContato(Scanner sc) {
