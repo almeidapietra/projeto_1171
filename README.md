@@ -101,7 +101,7 @@ Para contribuir com este projeto, siga as etapas abaixo:
 
 <br>
 <br>
-### *******************************
+<br>
 
 # Relatório
 
