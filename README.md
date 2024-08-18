@@ -1,8 +1,9 @@
 # Projeto Final do Módulo de Lógica da Programação - Formação Back-end Ada Tech
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/almeidapietra/projeto_1171/blob/main/LICENSE)
 
 ## Descrição do Projeto
 
-O sistema desenvolvido é uma agenda com funcionalidades básicas para manipulação de contatos. Este projeto foi desenvolvido como trabalho final do módulo Lógica da Programação da formação Back-end Ada Tech, parte do programa Santander Coders, pela equipe "Code Queens", composta por Clarissa Mapelli, Mariana, Mayara Santos, Pietra Almeida S. Costa e Rosângela Batista.
+O sistema desenvolvido é uma agenda com funcionalidades básicas para manipulação de contatos. Este projeto foi desenvolvido como trabalho final do módulo Lógica da Programação da formação Back-end Ada Tech, parte do programa Santander Coders, pela equipe "Code Queens", composta por Clarissa Mapelli, Mariana Miziara, Mayara Santos, Pietra Almeida e Rosângela Batista.
 
 
 ## Funcionalidades
@@ -53,12 +54,12 @@ A aplicação permite o gerenciamento de contatos em uma agenda. Abaixo estão o
 ### Remover Contato
 
 - **Como usar:** Escolha a opção 2 no menu principal.
-- **Descrição:** Permite remover um contato da agenda. A remoção é feita com base no ID do contato.
+- **Descrição:** Permite remover um contato da agenda. A remoção é feita com base no número de telefone do contato.
 
 ### Detalhar Contato
 
 - **Como usar:** Escolha a opção 3 no menu principal.
-- **Descrição:** Permite visualizar detalhes de um contato específico com base no ID fornecido.
+- **Descrição:** Permite visualizar detalhes de um contato específico com base no número de telefone fornecido.
 
 ### Editar Contato
 
@@ -98,8 +99,11 @@ Para contribuir com este projeto, siga as etapas abaixo:
    ```
 6. Abra uma solicitação de pull descrevendo suas alterações.
 
+<br>
+<br>
+### *******************************
 
-# ***** RELATÓRIO *****
+# Relatório
 
 ## Implementação das Funções
 
@@ -110,22 +114,27 @@ Para contribuir com este projeto, siga as etapas abaixo:
     - **Método `contains`**: Usado para verificar se o número de telefone já está presente na lista antes de adicionar um novo contato. Isso previne duplicidades.
     - **Tratamento de Exceções**: Implementado para capturar e informar o usuário caso tente adicionar um número de telefone que já está cadastrado.
 
-### Remover Contato
+ ### Remover Contato
 
 - **Estruturas e Métodos Utilizados**:
-    
+    - **ArrayList**: Utilizada para armazenar os dados dos contatos, como números, nomes, e-mails e IDs. O método `indexOf` é usado para localizar o índice do contato a ser removido com base no número de telefone.
+    - **Método `contains`**: Verifica se o número de telefone existe na lista antes de tentar removê-lo.
+    - **Tratamento de Exceções**: Implementado para capturar a tentativa de remoção de um contato inexistente, exibindo uma mensagem de erro apropriada ao usuário.
+
 
 ### Detalhar Contato
 
 - **Estruturas e Métodos Utilizados**:
-    - **ArrayList**: Usada para acessar os dados do contato pelo índice. O método `indexOf` encontra o índice do contato com base no ID fornecido.
+    - **ArrayList**: Usada para acessar os dados do contato pelo índice. O método `indexOf`  é usado para encontrar o índice do contato com base no número de telefone fornecido.
     - **Método `get`**: Recupera os detalhes do contato para exibição.
+    - **Validação**: Verifica se o telefone existe na lista antes de exibir os detalhes. Se o contato não for encontrado, uma mensagem de erro é exibida.
 
 ### Editar Contato
 
 - **Estruturas e Métodos Utilizados**:
     - **ArrayList**: Utilizada para armazenar e atualizar os dados dos contatos. O método `indexOf` é usado para encontrar o índice do contato que será editado, e o método `set` atualiza os dados existentes.
     - **Método `isEmpty`**: Verifica se os novos valores fornecidos pelo usuário são não vazios antes de atualizar os dados.
+    - **Verificação de ID**: Exibe todos os IDs disponíveis e valida se o ID fornecido pelo usuário existe na lista. Se o contato não for encontrado, uma mensagem de erro é exibida.
 
 ### Exibir Menu
 
@@ -191,12 +200,12 @@ Cada membro da equipe foi responsável por uma parte específica do código, con
 
 Agradecemos ao  [Santander](https://www.santander.com.br/ "Site do Banco Santander"), pela oportunidade de participar da formação Back-end através do programa Santander Coders, pelo investimento em nosso crescimento profissional, à [Ada Tech](https://ada.tech/ "Site da Ada tech") e ao nosso queridíssimo professor [Igor Mascarenhas ]() por todo conhecimento passado através de uma excelente didática e pela disposição em sempre ajudar. Suas orientações, conhecimentos e apoio foram fundamentais para o sucesso deste projeto.  
 
-# Equipe Code Queens:
+## Equipe Code Queens:
 
 Clarissa Mapelli </br>
-Mariana<br>
+Mariana Miziara <br>
 Mayara Santos </br>
-Pietra Almeida S. Costa</br>
+Pietra Almeida </br>
 Rosângela Batista</b>
 
 ## contatos Clarissa Mapelli:
@@ -205,10 +214,10 @@ Rosângela Batista</b>
     <a href="https://www.linkedin.com/in/clarissamapelli/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
 </div>
 
-## contatos Mariana :
+## contatos Mariana Miziara:
 <div> 
     <a href = "mailto:marianahelou.dv@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-    <a href="https://www.linkedin.com" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
+    <a href="https://www.linkedin.com/in/marianamiziara/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
 </div>
 
 ## contatos Mayara Santos :
