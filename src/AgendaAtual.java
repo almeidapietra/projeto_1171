@@ -108,7 +108,7 @@ public class AgendaAtual {
             System.out.println("Contato deletado com sucesso!");
 
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Erro inesperado, message:" + e.getMessage());
         }
         
     }
